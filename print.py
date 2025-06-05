@@ -210,7 +210,7 @@ def prepare_template_context(item_details):
         'name': item_details.get('name', 'N/A'),
         'description': item_details.get('description', 'N/A')[:28], # limit characaters due to space on label
         'model_number': model_number,
-        'serial_number': serial_number,
+        'serial_number': serial_number[-10:],
         'purchase_price': purchase_price,
         'purchase_from': purchase_from,
         'purchase_date': purchase_time,
