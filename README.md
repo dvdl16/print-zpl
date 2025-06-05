@@ -10,7 +10,13 @@ apt install build-essential libcups2-dev clang
 #### Usage
 
 ```shell
-uv run print.py <path_to_zpl_file.zpl>
+export HOMEBOX_API_URL="https://demo.homebox.site"
+export HOMEBOX_USERNAME="asset@manager.com"
+export HOMEBOX_PASSWORD=SOMEPASS
+export OWNER_TEXT="my surname"
+export ASSET_LABEL_URL_PREFIX="https://url.site.com/"
+
+uv run print.py <path_to_zpl_file.zpl> "<ASSET-ID>"
 ```
 
 
