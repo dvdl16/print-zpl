@@ -16,12 +16,12 @@ Requires Homebox API credentials and URL to be set as environment variables:
   HOMEBOX_PASSWORD:     Your Homebox password
 
 Usage:
-  uv run print_templated_zpl_homebox.py <path_to_zpl_template.j2> <asset_id_tag>
+  uv run print_asset.py <path_to_zpl_template.zpl> <asset_id_tag>
   
 Example:
-  uv run print_templated_zpl_homebox.py my_label_template.zpl.j2 "000-137"
+  uv run print_asset.py my_label_template.zpl "000-137"
 
-ZPL Template Example (e.g., my_label_template.zpl.j2):
+ZPL Template Example (e.g., my_label_template.zpl):
   ^XA
   ^FO50,50^A0N,30,30^FDAsset ID: {{ asset_id_tag }}^FS
   ^FO50,100^A0N,30,30^FDName: {{ name }}^FS

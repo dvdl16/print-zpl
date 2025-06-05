@@ -7,7 +7,7 @@ apt update
 apt install build-essential libcups2-dev clang
 ```
 
-#### Usage
+#### Usage (Asset Labels)
 
 ```shell
 export HOMEBOX_API_URL="https://demo.homebox.site"
@@ -19,6 +19,10 @@ export ASSET_LABEL_URL_PREFIX="https://url.site.com/"
 uv run print.py <path_to_zpl_file.zpl> "<ASSET-ID>"
 ```
 
+#### Usage (Plant Labels)
+```shell
+uv run print-plant.py <path_to_zpl_template.zpl> "<scientific>" "<afr>" "<eng>" "<sep>" "<region>" "<url>"
+```
 
 #### LLM
 
