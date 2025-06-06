@@ -200,10 +200,10 @@ def prepare_template_context(item_details):
     purchase_price = item_details.get('purchasePrice', 0)
     purchase_time = item_details.get('purchaseTime', 'N/A') # Format: "YYYY-MM-DD"
 
-    summary = (
-        f"{asset_id_tag} | {model_number} | Serial {serial_number[-10:]} | "
-        f"Seller {purchase_from} | ZAR {purchase_price} on {purchase_time}"
-    )
+    summary = f"{asset_id_tag} | {model_number} | "
+    if serial_number:
+        summary += f"Serial {serial_number[-10:]} | "
+    summary += f"Seller {purchase_from} | ZAR {purchase_price} on {purchase_time}"
 
     context = {
         'asset_id_tag': asset_id_tag,
