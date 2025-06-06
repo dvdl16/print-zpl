@@ -12,8 +12,8 @@ eJxjYBgFo2AUjBwg/58E0DD41I8CagIApMWxzQ==:C988
 ^FT37,173^BQN,2,5
 ^FH\^FDLA,{{ asset_label_url }}^FS
 ^FT189,114^A@N,25,24,TT0003M_^FH\^CI17^F8^FD{{ purchase_date }}^FS^CI0
-^BY144,144^FT561,153^BXN,4,200,0,0,1,~
-^FH\^FD{{ summary_line }}^FS
+^FT561,172^BQN,2,4
+^FH\^FDLA,{{ summary_line }}^FS
 ^FO535,3^GB0,157,4^FS
 ^FT413,150^A@N,17,18,TT0003M_^FH\^CI17^F8^FD{{ owner_text }}^FS^CI0
 ^FT556,93^A@B,17,18,TT0003M_^FH\^CI17^F8^FDData^FS^CI0
