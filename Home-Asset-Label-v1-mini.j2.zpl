@@ -1,0 +1,15 @@
+^XA~TA000~JSN^LT0^MNW^MTT^PON^PMN^LH0,0^JMA^PR2,2~SD25^JUS^LRN^CI0^XZ
+^XA
+^MMT
+^PW719
+^LL0161
+^LS0
+^FT108,86^A0N,34,26^FH\^FD{{ asset_id_tag | replace('-', '.') }}^FS
+^FT3,168^BQN,2,4
+^FH\^FDLA,{{ asset_label_url }}^FS
+^FT110,118^A@N,20,20,TT0003M_^FH\^CI17^F8^FD{{ purchase_date[:-3] }}^FS^CI0
+^FT200,165^BQN,2,3
+^FH\^FDLA,{{ summary_line }}^FS
+^FO316,4^GB0,152,4^FS
+^FT108,140^A@N,17,18,TT0003M_^FH\^CI17^F8^FD{{ owner_text }}^FS^CI0
+^PQ1,0,1,Y^XZ
