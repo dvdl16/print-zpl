@@ -133,8 +133,8 @@ def _send_zpl_bytes_to_cups(zpl_data_bytes, job_title_identifier=""):
 
 def main():
     if len(sys.argv) != 10:
-        print('Usage: uv run print-plant.py <path_to_zpl_template.zpl> "<scientific>" "<afr>" "<eng>" "<sep>" "<region>" "<url>" "<planted_date>" "<flowering_range>"')
-        print('Example: uv run print-plant.py my_label_template.zpl "Dombeya rotundifolia" "drolpeer" "wild pear" "mohlabaphala" "magaliesberg" "https://url.site.com" "Sep 24" "Sep-Oct"')
+        print('Usage: uv run print-plant.py <path_to_zpl_template.zpl> "<scientific>" "<afr>" "<eng>" "<sep>" "<region>" "<url>" "<planted_date>" "<flowering_range>" "<local_lang>"')
+        print('Example: uv run print-plant.py my_label_template.zpl "Dombeya rotundifolia" "drolpeer" "wild pear" "mohlabaphala" "magaliesberg" "https://url.site.com" "Sep 24" "Sep-Oct" "NSO"')
         sys.exit(1)
     
     zpl_template_file = sys.argv[1]
@@ -146,6 +146,7 @@ def main():
     url = sys.argv[7]
     planted_date = sys.argv[8]
     flowering_range = sys.argv[9]
+    local_lang = sys.argv[10]
 
     if not os.path.exists(zpl_template_file):
         print(f"Error: ZPL template file not found at '{zpl_template_file}'")
@@ -159,7 +160,8 @@ def main():
         "region": region,
         "url": url,
         "planted_date": planted_date,
-        "flowering_range": flowering_range
+        "flowering_range": flowering_range,
+        "local_lang": local_lang
     }
     print(f"\nUsing data for plant: {template_context}")
 

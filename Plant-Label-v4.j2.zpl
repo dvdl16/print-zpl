@@ -26,7 +26,7 @@ eJxjYCAaCEBpCyhdAaX/QOkaKP0DQslEFIDpf68hArXiENqqCULbM34A03xdDyAaWCAU82oIzR4Iofne
 ^FO7,63^GE34,23,1^FS
 ^FT18,78^A0N,15,12^FH\^FDAF^FS
 {% if sep %}
-^FT15,143^A0N,15,12^FH\^FDNSO^FS
+^FT15,143^A0N,15,12^FH\^FD{{ local_lang }}^FS
 {% endif %}
 ^FO7,96^GE34,23,1^FS
 {% if sep %}
