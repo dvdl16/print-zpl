@@ -132,7 +132,7 @@ def _send_zpl_bytes_to_cups(zpl_data_bytes, job_title_identifier=""):
                 print(f"Warning: Could not delete temporary file '{temp_file_path}': {e}")
 
 def main():
-    if len(sys.argv) != 10:
+    if len(sys.argv) != 11:
         print('Usage: uv run print-plant.py <path_to_zpl_template.zpl> "<scientific>" "<afr>" "<eng>" "<sep>" "<region>" "<url>" "<planted_date>" "<flowering_range>" "<local_lang>"')
         print('Example: uv run print-plant.py my_label_template.zpl "Dombeya rotundifolia" "drolpeer" "wild pear" "mohlabaphala" "magaliesberg" "https://url.site.com" "Sep 24" "Sep-Oct" "NSO"')
         sys.exit(1)
