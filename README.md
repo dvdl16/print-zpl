@@ -7,6 +7,12 @@ apt update
 apt install build-essential libcups2-dev clang
 ```
 
+or for arch
+
+```
+sudo pacman -S base-devel cups clang
+```
+
 #### Usage (Asset Labels)
 
 ```shell
@@ -22,6 +28,11 @@ uv run print.py <path_to_zpl_file.zpl> "<ASSET-ID>"
 #### Usage (Plant Labels)
 ```shell
 uv run print-plant.py <path_to_zpl_template.zpl> "<scientific>" "<afr>" "<eng>" "<sep>" "<region>" "<url>"
+```
+
+#### Usage (Todoist Labels)
+```shell
+uv run print-todoist.py <path_to_zpl_template.zpl> "<part_1>" "<part_2>" "<part_3>" "<url>"
 ```
 
 #### LLM
