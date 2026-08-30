@@ -163,7 +163,7 @@ def get_asset_record_id(session, asset_id_tag, api_token):
 
 def get_asset_details(session, record_id, api_token):
     """Fetches full details for an asset using its record ID (UUID)."""
-    item_details_url = f"{HOMEBOX_API_URL}/api/v1/items/{record_id}"
+    item_details_url = f"{HOMEBOX_API_URL}/api/v1/entities/{record_id}"
     headers = {
         "Accept": "application/json",
         "Authorization": api_token # Same note as above about "Bearer "
@@ -198,7 +198,7 @@ def prepare_template_context(item_details):
     serial_number = item_details.get('serialNumber', 'N/A')
     purchase_from = item_details.get('purchaseFrom', 'N/A')
     purchase_price = item_details.get('purchasePrice', 0)
-    purchase_time = item_details.get('purchaseTime', 'N/A') # Format: "YYYY-MM-DD"
+    purchase_time = item_details.get('purchaseDate', 'N/A') # Format: "YYYY-MM-DD"
 
     summary = f"{asset_id_tag} | {model_number} | "
     if serial_number:
@@ -214,7 +214,7 @@ def prepare_template_context(item_details):
         'purchase_price': purchase_price,
         'purchase_from': purchase_from,
         'purchase_date': purchase_time,
-        'location_name': item_details.get('location', {}).get('name', 'N/A'),
+        'location_name': (item_details.get('parent') or {}).get('name', 'N/A'),
         'asset_label_url': f"{ASSET_LABEL_URL_PREFIX}{asset_id_tag}" if asset_id_tag != 'N/A' else 'N/A',
         'summary_line': summary,
         'owner_text': OWNER_TEXT,
