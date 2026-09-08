@@ -22,7 +22,7 @@ import tempfile
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 # --- CUPS Configuration ---
-PRINTER_QUEUE_NAME = "Zebra-ZD421-203dpi-ZPL"  # Replace with your printer's queue name
+PRINTER_QUEUE_NAME = "Zebra-ZD230-203dpi-ZPL"  # Replace with your printer's queue name
 CUPS_SERVER_IP = "192.168.2.63"  # Replace with your CUPS server IP
 CUPS_SERVER_PORT = 631
 # --- End CUPS Configuration ---
